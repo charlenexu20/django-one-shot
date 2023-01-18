@@ -7,6 +7,14 @@ from todos.models import TodoList
 def todo_list_list(request):
     todolists = TodoList.objects.all()
     context = {
-        "todo_list_list": todolists,
+        "todolists": todolists,
     }
     return render(request, "todos/list.html", context)
+
+
+def todo_list_detail(request, id):
+    todolist = TodoList.objects.get(id=id)
+    context = {
+        "todolist": todolist,
+    }
+    return render(request, "todos/detail.html", context)
