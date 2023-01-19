@@ -10,6 +10,7 @@
     <main>
         <div>
             <h1> {{ todolist.name }} </h1>
+            <a href="{% url 'todo_list_update' todolist.id %}">Edit</a>
             <h2>Tasks</h2>
             <table>
                 <thead>
