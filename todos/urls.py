@@ -12,9 +12,9 @@ from todos.views import (
 
 urlpatterns = [
     path("items/<int:id>/edit/", todo_item_update, name="todo_item_update"),
-    path("items/create", todo_item_create, name="todo_item_create"),
-    path("<int:id>/delete", todo_list_delete, name="todo_list_delete"),
-    path("<int:id>/edit", todo_list_update, name="todo_list_update"),
+    path("items/create/", todo_item_create, name="todo_item_create"),
+    path("<int:id>/delete/", todo_list_delete, name="todo_list_delete"),
+    path("<int:id>/edit/", todo_list_update, name="todo_list_update"),
     path("create/", todo_list_create, name="todo_list_create"),
     path("<int:id>/", todo_list_detail, name="todo_list_detail"),
     path("", todo_list_list, name="todo_list_list"),
